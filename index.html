@@ -19,7 +19,9 @@
 </head>
 
 <body>
-
+<audio loop="loop" autoplay="autoplay" id="bgmMusic">
+  <source src="./audio/bgm.mp3" type="audio/mp3" />
+</audio>
 <div id="mainDiv">
 	<div id="content">
 		<div id="code">
@@ -80,6 +82,7 @@ together.setHours(20);
 together.setMinutes(0);
 together.setSeconds(0);
 together.setMilliseconds(0);
+setInterval("toggleSound()",1);//自动播放音频，在js里面写好了方法
 
 if (!document.createElement('canvas').getContext) {
 	var msg = document.createElement("div");
